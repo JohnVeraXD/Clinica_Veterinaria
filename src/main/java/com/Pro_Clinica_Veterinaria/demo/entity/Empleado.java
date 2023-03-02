@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.Pro_Clinica_Veterinaria.demo.entity;
 
 import jakarta.persistence.Column;
@@ -10,22 +7,29 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  *
  * @author ANNOUS SUONNA
  */
 @Entity
-@Table(name = "Empleado")
+@Table(name = "empleados")
 public class Empleado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String nombres;
     private String apellidos;
-    private String fecha_Nacimiento;
+
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date fecha_Nacimiento;
+    
     @Column(unique = true, length = 13)
     private String cedula;
     private String celular;
@@ -34,12 +38,11 @@ public class Empleado {
     private int estado;
     //private Image foto;
 
-    public Empleado()
-    {
-        
+    public Empleado() {
+
     }
-    
-    public Empleado(String nombres, String apellidos, String fecha_Nacimiento, String cedula, String celular, String direccion, String tipo, int estado) {
+
+    public Empleado(String nombres, String apellidos, Date fecha_Nacimiento, String cedula, String celular, String direccion, String tipo, int estado) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.fecha_Nacimiento = fecha_Nacimiento;
@@ -50,13 +53,11 @@ public class Empleado {
         this.estado = estado;
     }
 
-    
-    
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -76,11 +77,11 @@ public class Empleado {
         this.apellidos = apellidos;
     }
 
-    public String getFecha_Nacimiento() {
+    public Date getFecha_Nacimiento() {
         return fecha_Nacimiento;
     }
 
-    public void setFecha_Nacimiento(String fecha_Nacimiento) {
+    public void setFecha_Nacimiento(Date fecha_Nacimiento) {
         this.fecha_Nacimiento = fecha_Nacimiento;
     }
 
