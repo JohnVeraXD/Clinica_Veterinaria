@@ -13,6 +13,7 @@ public class PageRender<T> {
     private int paginaActual;
     private List<PageItem> paginas;
 
+    
     public PageRender(String url, Page<T> page) {
         this.url = url;
         this.page = page;

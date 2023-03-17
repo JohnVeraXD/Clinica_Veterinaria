@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="utf-8"> 
-<title>Student Management System</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
-</head>
-<body>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#">Empleado Management System</a>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Student Management System</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Empleado Management System</a>
 
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="@{/empleado}">Student Management</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="@{/empleado}">Teacher Management</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@{/empleado}">Student Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@{/empleado}">Teacher Management</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-	<div class ="container">
-		<div class = "row">
-			<h1> List Students </h1>
-		</div>
-		
-		<div class = "row">
-			<div class = "col-lg-3">
-				<a href = "@{/empleado/new}" class = "btn btn-primary btn-sm mb-3"> Add Student</a>
-			</div>
-		</div>
-		<table class = "table table-striped table-bordered">
-			<thead class = "table-dark">
-				<tr>
-					<th> Nombres</th>
-					<th> Apellidos</th>
-					<th> Fecha Nacimiento </th>
-                                        <th> Cedula </th>
-                                        <th> Celular </th>
-                                        <th> Direcci�n </th>
-                                        <th> Tipo </th>
-					<th> Accion </th>
-				</tr>
-			</thead>
-			
-			<tbody>
-				<tr th:each = "empleado ${Empleado}">
-					<td th:text = "${Empleado.nombres}"></td>
-					<td th:text = "${Empleado.apellidos}"></td>
-					<td th:text = "${Empleado.fecha_Nacimiento}"></td>
-                                        <td th:text = "${Empleado.cedula}"></td>
-                                        <td th:text = "${Empleado.celular}" ></td>
-                                        <td th:text = "${Empleado.direccion}" ></td>
-                                        <td th:text = "${Empleado.tipo}" ></td>
-                                        
-					<td>
-						<a th:href = "@{/empleado/edit/{id}(id=${empleado.id})}"
-						 class = "btn btn-primary">Update</a>
-						
-						<a th:href = "@{/empleado/{id}(id=${empleado.id})}"
-						 class = "btn btn-danger">Delete</a>
-						 
-					</td>
-				</tr>
-			</tbody>
-		
-		</table>
-		
-	</div>
-</body>
+        <div class ="container">
+            <div class = "row">
+                <h1> List Students </h1>
+            </div>
+
+            <div class = "row">
+                <div class = "col-lg-3">
+                    <a href = "@{/empleado/new}" class = "btn btn-primary btn-sm mb-3"> Add Student</a>
+                </div>
+            </div>
+            <table class = "table table-striped table-bordered">
+                <thead class = "table-dark">
+                    <tr>
+                        <th> Nombres</th>
+                        <th> Apellidos</th>
+                        <th> Fecha Nacimiento </th>
+                        <th> Cedula </th>
+                        <th> Celular </th>
+                        <th> Direcci�n </th>
+                        <th> Tipo </th>
+                        <th> Accion </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each = "empleado ${Empleado}">
+                        <td th:text = "${Empleado.nombres}"></td>
+                        <td th:text = "${Empleado.apellidos}"></td>
+                        <td th:text = "${Empleado.fecha_Nacimiento}"></td>
+                        <td th:text = "${Empleado.cedula}"></td>
+                        <td th:text = "${Empleado.celular}" ></td>
+                        <td th:text = "${Empleado.direccion}" ></td>
+                        <td th:text = "${Empleado.tipo}" ></td>
+
+                        <td>
+                            <a th:href = "@{/empleado/edit/{id}(id=${empleado.id})}"
+                               class = "btn btn-primary">Update</a>
+
+                            <a th:href = "@{/empleado/{id}(id=${empleado.id})}"
+                               class = "btn btn-danger">Delete</a>
+
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </body>
 </html>
