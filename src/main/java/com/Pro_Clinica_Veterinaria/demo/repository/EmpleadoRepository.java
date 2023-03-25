@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface EmpleadoRepository extends PagingAndSortingRepository<Empleado, Long> {
+public interface EmpleadoRepository extends PagingAndSortingRepository<Empleado, Integer> {
 
 }

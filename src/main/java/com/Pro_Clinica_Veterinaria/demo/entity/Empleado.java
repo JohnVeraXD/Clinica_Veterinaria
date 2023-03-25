@@ -12,17 +12,13 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
-/**
- *
- * @author ANNOUS SUONNA
- */
 @Entity
 @Table(name = "empleados")
 public class Empleado {
 
-    @Id
+      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String nombres;
     private String apellidos;
 
@@ -35,14 +31,14 @@ public class Empleado {
     private String celular;
     private String direccion;
     private String tipo;
-    private int estado;
     //private Image foto;
 
     public Empleado() {
 
     }
 
-    public Empleado(String nombres, String apellidos, Date fecha_Nacimiento, String cedula, String celular, String direccion, String tipo, int estado) {
+    public Empleado(Integer id,String nombres, String apellidos, Date fecha_Nacimiento, String cedula, String celular, String direccion, String tipo) {
+        this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.fecha_Nacimiento = fecha_Nacimiento;
@@ -50,14 +46,13 @@ public class Empleado {
         this.celular = celular;
         this.direccion = direccion;
         this.tipo = tipo;
-        this.estado = estado;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -117,12 +112,11 @@ public class Empleado {
         this.tipo = tipo;
     }
 
-    public int getEstado() {
-        return estado;
-    }
-
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
+    
+    @Override
+	public String toString() {
+		return "Empleado [id=" + id + ", nombre=" + nombres + ", apellidos=" + apellidos + ", fecha_Nacimiento=" + fecha_Nacimiento
+				+ ", cedula=" + cedula + ",celular="+ celular + ",direccion"+direccion+ ",tipo" +tipo+ "]";
+	}
 
 }

@@ -9,50 +9,60 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
+//@RequestMapping("/Empleado")
 public class EmpleadoController {
 
-    private static final Logger log = org.slf4j.LoggerFactory.getLogger(Empleado.class);
-	
+    private static final Logger log = (Logger) org.slf4j.LoggerFactory.getLogger(Empleado.class);
+
     @Autowired
-	private EmpleadoService empleadoService;
+    private EmpleadoService empleadoService;
+
+    @GetMapping({"/empleado"})
+    public String listar(Model modelo) {
+        modelo.addAttribute("empleados", empleadoService.findAll());
+
+        return "VerUsuario";
+    }
+
+    @GetMapping("/create")
+    public String agregar() {
+        return "create";
+    }
+
+    /*
+    @GetMapping("/volver")
+    public String VolverMenu() {
+        return "redirect:/listar";
+    }
+    */
+
+    @PostMapping("/save")
+    public String guardar(Empleado empleado) {
+        empleadoService.save(empleado);
+        return "redirect:/listar";
+    }
+
+    @GetMapping("/editar/{id}")
+    public String edit(@PathVariable(value = "id") Integer id, Model modelo) {
+        Empleado p = empleadoService.findOne(id);
+        log.info("Objeto recuperado {}", p);
+        modelo.addAttribute("empleado", p);
+        return "editar";
+    }
+
+    @GetMapping("/eliminar/{id}")
+    public String edit(@PathVariable(value = "id") Integer id) {
+        Empleado p = empleadoService.findOne(id);
+        log.info("Objeto recuperado {}", p);
+        empleadoService.delete(id);
+        return "redirect:/listar";
+    }
 	
-	@GetMapping({"/","/Empleado",""})
-	public String listar(Model modelo) {
-		modelo.addAttribute("empleado", empleadoService.findAll());
-		
-		return "Empleado";
-	}
-	
-	@GetMapping("/create")
-	public String agregar() {
-		return "create";
-	}
-        
-	@PostMapping("/save")
-	public String guardar(Empleado empleado) {
-		empleadoService.save(empleado);
-		return "redirect:/listar";
-	}
-	
-	@GetMapping("/editar/{id}")
-	public String edit(@PathVariable (value="id")Long id, Model modelo) {
-		Empleado p= empleadoService.findOne(id);
-		log.info("Objeto recuperado {}", p);
-		modelo.addAttribute("producto", p);
-		return "editar";
-	}
-	
-	@GetMapping("/eliminar/{id}")
-	public String edit(@PathVariable (value="id")Long id) {
-		Empleado p= empleadoService.findOne(id);
-		log.info("Objeto recuperado {}", p);
-		empleadoService.delete(id);
-		return "redirect:/listar";
-	}
-	
+    
         /*
 	@GetMapping("/exportarPDF")
 	public void exportarListadoDeEmpleadosEnPDF(HttpServletResponse response) throws DocumentException, IOException {

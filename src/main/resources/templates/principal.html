@@ -18,13 +18,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> 
         <!-- Vendor CSS Files -->         
         
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
-        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-        <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.bubble.css">
-        <link href="https://remixicon.com/fonts/remixicon.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel='stylesheet'>
+        <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+        <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
         <!-- Template Main CSS File -->         
         
         <link href="assets/css/style.css" rel="stylesheet">
@@ -55,100 +55,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <li class="nav-item d-block d-lg-none"> <a class="nav-link nav-icon search-bar-toggle " href="#"> <i class="bi bi-search"></i> </a> 
                     </li>
                     <!-- End Search Icon-->                     
-                    <li class="nav-item dropdown"> <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge bg-primary badge-number">4</span> </a>
+                    <li class="nav-item dropdown"> <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge bg-primary badge-number"></span> </a>
                         <!-- End Notification Icon -->                         
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications"> 
-                            <li class="dropdown-header"> 
-                                You have 4 new notifications<a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="notification-item"> <i class="bi bi-exclamation-circle text-warning"></i> 
-                                <div> 
-                                    <h4>Lorem Ipsum</h4> 
-                                    <p>Quae dolorem earum veritatis oditseno</p> 
-                                    <p>30 min. ago</p> 
-                                </div>                                 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="notification-item"> <i class="bi bi-x-circle text-danger"></i> 
-                                <div> 
-                                    <h4>Atque rerum nesciunt</h4> 
-                                    <p>Quae dolorem earum veritatis oditseno</p> 
-                                    <p>1 hr. ago</p> 
-                                </div>                                 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="notification-item"> <i class="bi bi-check-circle text-success"></i> 
-                                <div> 
-                                    <h4>Sit rerum fuga</h4> 
-                                    <p>Quae dolorem earum veritatis oditseno</p> 
-                                    <p>2 hrs. ago</p> 
-                                </div>                                 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="notification-item"> <i class="bi bi-info-circle text-primary"></i> 
-                                <div> 
-                                    <h4>Dicta reprehenderit</h4> 
-                                    <p>Quae dolorem earum veritatis oditseno</p> 
-                                    <p>4 hrs. ago</p> 
-                                </div>                                 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="dropdown-footer"> <a href="#">Show all notifications</a> 
-                            </li>                             
-                        </ul>
+                        
                         <!-- End Notification Dropdown Items -->                         
                     </li>
                     <!-- End Notification Nav -->                     
-                    <li class="nav-item dropdown"> <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-chat-left-text"></i> <span class="badge bg-success badge-number">3</span> </a>
+                    <li class="nav-item dropdown"> <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-chat-left-text"></i> <span class="badge bg-success badge-number"></span> </a>
                         <!-- End Messages Icon -->                         
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages"> 
-                            <li class="dropdown-header"> 
-                                You have 3 new messages<a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="message-item"> <a href="#"> <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle"> <div> 
-                                        <h4>Maria Hudson</h4> 
-                                        <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p> 
-                                        <p>4 hrs. ago</p> 
-                                    </div> </a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="message-item"> <a href="#"> <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle"> <div> 
-                                        <h4>Anna Nelson</h4> 
-                                        <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p> 
-                                        <p>6 hrs. ago</p> 
-                                    </div> </a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="message-item"> <a href="#"> <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle"> <div> 
-                                        <h4>David Muldon</h4> 
-                                        <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p> 
-                                        <p>8 hrs. ago</p> 
-                                    </div> </a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li class="dropdown-footer"> <a href="#">Show all messages</a> 
-                            </li>                             
-                        </ul>
+                        
                         <!-- End Messages Dropdown Items -->                         
                     </li>
                     <!-- End Messages Nav -->                     
@@ -156,7 +71,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <!-- End Profile Iamge Icon -->                         
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"> 
                             <li class="dropdown-header"> 
-                                <h6>Kevin Anderson</h6> <span>Administrador</span> 
+                                <h6>John Vera</h6> <span>Administrador</span> 
                             </li>                             
                             <li> 
                                 <hr class="dropdown-divider"> 
@@ -193,36 +108,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <li class="nav-item"> <a class="nav-link" href="index.html"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a> 
                 </li>
                 <!-- End Dashboard Nav -->                 
-                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-people-fill"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-people-fill"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
-                        <li> <a href="AgregarUsuario.html"> <i class="bi bi-circle"></i><span>Agregar Usuario</span> </a> 
+                        <li> <a th:href="@{/create}"> <i class="bi bi-circle"></i><span>Agregar Empleado</span> </a> 
                         </li>                         
-                        <li> <a href="VerUsuario.html"> <i class="bi bi-circle"></i><span>Ver Usuarios</span> </a> 
-                        </li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
+                        <li> <a th:href="@{/empleado}"> <i class="bi bi-circle"></i><span>Ver Empleado</span> </a> 
+                        </li>
                     </ul>                     
                 </li>
                 <!-- End Components Nav -->                 
@@ -290,12 +181,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- End Sidebar-->         
         <main id="main" class="main"> 
             <div class="pagetitle"> 
-                <h1>Dashboard</h1> 
+                <h1>Panel</h1> 
                 <nav> 
                     <ol class="breadcrumb"> 
                         <li class="breadcrumb-item"><a href="index.html">Home</a>
                         </li>                         
-                        <li class="breadcrumb-item active">Dashboard</li>                         
+                        <li class="breadcrumb-item active">Panel</li>                         
                     </ol>                     
                 </nav>                 
             </div>
@@ -327,7 +218,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-cart"></i> 
                                             </div>                                             
                                             <div class="ps-3"> 
-                                                <h6>145</h6> <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> 
+                                                <h6>145</h6> <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">Aumento</span> 
                                             </div>                                             
                                         </div>                                         
                                     </div>                                     
@@ -342,11 +233,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <li class="dropdown-header text-start"> 
                                                 <h6>Filter</h6> 
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">Today</a>
+                                            <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Month</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Year</a>
+                                            <li><a class="dropdown-item" href="#">Este año</a>
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -356,7 +247,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-currency-dollar"></i> 
                                             </div>                                             
                                             <div class="ps-3"> 
-                                                <h6>$3,264</h6> <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> 
+                                                <h6>$3,264</h6> <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">Aumento</span> 
                                             </div>                                             
                                         </div>                                         
                                     </div>                                     
@@ -371,11 +262,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <li class="dropdown-header text-start"> 
                                                 <h6>Filter</h6> 
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">Today</a>
+                                            <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Month</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Year</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -385,7 +276,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-bricks"></i> 
                                             </div>                                             
                                             <div class="ps-3"> 
-                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> 
+                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">Disminuyo</span> 
                                             </div>                                             
                                         </div>                                         
                                     </div>                                     
@@ -400,11 +291,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <li class="dropdown-header text-start"> 
                                                 <h6>Filter</h6> 
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">Today</a>
+                                            <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Month</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Year</a>
+                                            <li><a class="dropdown-item" href="#">Este año</a>
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -414,7 +305,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-person-badge"></i> 
                                             </div>                                             
                                             <div class="ps-3"> 
-                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> 
+                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">Disminuyo</span> 
                                             </div>                                             
                                         </div>                                         
                                     </div>                                     
@@ -429,11 +320,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <li class="dropdown-header text-start"> 
                                                 <h6>Filter</h6> 
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">Today</a>
+                                            <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Month</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Year</a>
+                                            <li><a class="dropdown-item" href="#">Este año</a>
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -443,7 +334,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-people"></i> 
                                             </div>                                             
                                             <div class="ps-3"> 
-                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> 
+                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">Disminuyo</span> 
                                             </div>                                             
                                         </div>                                         
                                     </div>                                     
@@ -458,11 +349,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <li class="dropdown-header text-start"> 
                                                 <h6>Filter</h6> 
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">Today</a>
+                                            <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Month</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Year</a>
+                                            <li><a class="dropdown-item" href="#">Este año</a>
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -472,7 +363,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-github"></i> 
                                             </div>                                             
                                             <div class="ps-3"> 
-                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> 
+                                                <h6>1244</h6> <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">Disminuyo</span> 
                                             </div>                                             
                                         </div>                                         
                                     </div>                                     
@@ -564,11 +455,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <li class="dropdown-header text-start"> 
                                                 <h6>Filter</h6> 
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">Today</a>
+                                            <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Month</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Year</a>
+                                            <li><a class="dropdown-item" href="#">Este año</a>
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -583,11 +474,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <li class="dropdown-header text-start"> 
                                                 <h6>Filter</h6> 
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">Today</a>
+                                            <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Month</a>
+                                            <li><a class="dropdown-item" href="#">Este mes</a>
                                             </li>                                             
-                                            <li><a class="dropdown-item" href="#">This Year</a>
+                                            <li><a class="dropdown-item" href="#">Este año</a>
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -670,11 +561,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <li class="dropdown-header text-start"> 
                                         <h6>Filter</h6> 
                                     </li>                                     
-                                    <li><a class="dropdown-item" href="#">Today</a>
+                                    <li><a class="dropdown-item" href="#">Hoy</a>
                                     </li>                                     
-                                    <li><a class="dropdown-item" href="#">This Month</a>
+                                    <li><a class="dropdown-item" href="#">Este mes</a>
                                     </li>                                     
-                                    <li><a class="dropdown-item" href="#">This Year</a>
+                                    <li><a class="dropdown-item" href="#">Este año</a>
                                     </li>                                     
                                 </ul>                                 
                             </div>                             
@@ -751,7 +642,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- ======= Footer ======= -->         
         <footer id="footer" class="footer"> 
             <div class="copyright"> 
-                &copy; Copyright <strong><span>UTEQ</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>UTEQ</span></strong>. Reservados todos los derechos
             </div>             
         </footer>
         <!-- End Footer -->         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> 

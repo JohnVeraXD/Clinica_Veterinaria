@@ -40,7 +40,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <div class="container"> 
                         <div class="row justify-content-center"> 
                             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center"> 
-                                <div class="d-flex justify-content-center py-4"> <a href="index.html" class="logo d-flex align-items-center w-auto"> <img src="Introduccion/assets/img/512x512bb.jpg" alt=""> <span class="d-none d-lg-block">MyCanDB</span> </a> 
+                                <div class="d-flex justify-content-center py-4"> <a class="logo d-flex align-items-center w-auto"> <img src="Introduccion/assets/img/512x512bb.jpg" alt=""> <span class="d-none d-lg-block">MyCanDB</span> </a> 
                                 </div>
                                 <!-- End Logo -->                                 
                                 <div class="card mb-3"> 
@@ -48,29 +48,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         <div class="pt-4 pb-2"> 
                                             <h5 class="card-title text-center pb-0 fs-4">Inicio de Sesión</h5> 
                                             <p class="text-center small">Ingresa tu Usuario y Contraseña</p> 
-                                        </div>                                         
-                                        <form class="row g-3 needs-validation" novalidate> 
-                                            <div class="col-12"> 
+                                        </div>
+                                        <form th:action="@{/login}" method="post" class="row g-3 needs-validation" novalidate>
+                                           <div class="col-12"> 
                                                 <label for="yourUsername" class="form-label">Usuario</label>                                                 
-                                                <div class="input-group has-validation"> <span class="input-group-text" id="inputGroupPrepend">@</span> 
-                                                    <input type="text" name="username" class="form-control" id="yourUsername" required> 
+                                                <div class="input-group has-validation">
+                                                    <input type="text" name="nombreUsuario" class="form-control" id="yourUsername" required> 
                                                     <div class="invalid-feedback">Por favor ingrese su usuario!.</div>                                                     
                                                 </div>                                                 
                                             </div>                                             
                                             <div class="col-12"> 
                                                 <label for="yourPassword" class="form-label">Contraseña</label>                                                 
-                                                <input type="password" name="password" class="form-control" id="yourPassword" required> 
+                                                <input type="password" name="contrasenia" class="form-control" id="yourPassword" required> 
                                                 <div class="invalid-feedback">Por favor ingrese su contraseña!</div>                                                 
-                                            </div>                                             
+                                            </div>                                                      
                                             <div class="col-12"> 
-                                                <div class="form-check"> 
-                                                    <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe"> 
-                                                    <label class="form-check-label" for="rememberMe">Recordarme</label>                                                     
-                                                </div>                                                 
-                                            </div>                                             
-                                            <div class="col-12"> <a href="principal.html"><button class="btn btn-primary w-100" type="submit">Ingresar</button></a> 
-                                            </div> <a href="principal.html">Ingresar</a>
-                                        </form>                                         
+                                                <button class="btn btn-primary w-100" type="submit">Ingresar</button>
+                                            </div> 
+                                        </form>
                                     </div>                                     
                                 </div>                                 
                             </div>                             
@@ -79,7 +74,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </section>                 
             </div>             
         </main>
-        <!-- End #main -->         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> 
+        <!-- End #main -->      
         <!-- Vendor JS Files -->         
         <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>         
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>         

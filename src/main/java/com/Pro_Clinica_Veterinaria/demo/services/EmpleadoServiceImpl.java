@@ -9,9 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 @Service
-public class EmpleadoServiceImpl implements EmpleadoService{
+public class EmpleadoServiceImpl implements EmpleadoService {
 
     @Autowired
     private EmpleadoRepository empleadoRepository;
@@ -23,12 +22,6 @@ public class EmpleadoServiceImpl implements EmpleadoService{
     }
 
     @Override
-    @Transactional(readOnly = true)
-    public Page<Empleado> findAll(Pageable pageable) {
-        return empleadoRepository.findAll(pageable);
-    }
-
-    @Override
     @Transactional
     public void save(Empleado empleado) {
         empleadoRepository.save(empleado);
@@ -36,13 +29,18 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 
     @Override
     @Transactional
-    public void delete(Long id) {
+    public void delete(Integer id) {
         empleadoRepository.deleteById(id);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Empleado findOne(Long id) {
+    public Empleado findOne(Integer id) {
         return empleadoRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Page<Empleado> findAll(Pageable pageable) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

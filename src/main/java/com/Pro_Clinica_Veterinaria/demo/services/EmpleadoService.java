@@ -5,16 +5,15 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-
 public interface EmpleadoService {
 
-	public List<Empleado> findAll();
+    public List<Empleado> findAll();
 
-	public Page<Empleado> findAll(Pageable pageable);
+    public Page<Empleado> findAll(Pageable pageable);
 
-	public void save(Empleado empleado);
+    public void save(Empleado empleado);
 
-	public Empleado findOne(Long id);
+    public Empleado findOne(Integer id);
 
-	public void delete(Long id);
+    public void delete(Integer id);
 }

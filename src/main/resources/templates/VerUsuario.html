@@ -192,34 +192,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- End Dashboard Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-menu-button-wide"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
-                        <li> <a href="AgregarUsuario.html"> <i class="bi bi-circle"></i><span>Agregar Usuario</span> </a> 
+                        <li> <a th:href="@{/create}"> <i class="bi bi-circle"></i><span>Agregar Empleado</span> </a> 
                         </li>                         
-                        <li> <a href="VerUsuario.html"> <i class="bi bi-circle"></i><span>Ver Usuarios</span> </a> 
-                        </li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
+                        <li> <a th:href="@{/empleado}"> <i class="bi bi-circle"></i><span>Ver Empleado</span> </a> 
+                        </li>                                                
                     </ul>                     
                 </li>
                 <!-- End Components Nav -->                 
@@ -228,28 +204,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <li> <a href="forms-elements.html"> <i class="bi bi-circle"></i><span>Agregar Pacientes</span> </a> 
                         </li>                         
                         <li> <a href="forms-layouts.html"> <i class="bi bi-circle"></i><span>Ver Pacientes</span> </a> 
-                        </li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
+                        </li>                                                  
                     </ul>                     
                 </li>
                 <!-- End Forms Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-people"></i><span>Inventario</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="tables-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style=""> 
                         <li> <a href="tables-general.html"><i class="bi bi-circle"></i><span>Agregar Producto</span></a>
+                        </li>                         
+                        <li>
                             <a href="tables-general.html"> <i class="bi bi-circle"></i><span>Ver Productos</span> </a> 
                         </li>                         
-                        <li> 
-</li>                         
                     </ul>                     
                 </li>
                 <!-- End Tables Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-bar-chart"></i><span>Citas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style=""> 
                         <li> 
-</li>                         
+                        </li>                         
                         <li> <a href="charts-apexcharts.html"> <i class="bi bi-circle"></i><span>Agregar Cita</span> </a> 
                         </li>                         
                         <li> <a href="charts-echarts.html"> <i class="bi bi-circle"></i><span>Ver Cita</span> </a> 
@@ -259,36 +231,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- End Charts Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-gem"></i><span>Jaulas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"> 
-                        <li> <a href="icons-bootstrap.html"><i class="bi bi-circle"></i><span>Agregar&nbsp; Jaulas</span></a> 
+                        <li> <a href="icons-bootstrap.html"><i class="bi bi-circle"></i><span>Agregar Jaulas</span></a> 
                         </li>                         
                         <li> <a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Ver Jaulas</span> </a> 
                         </li>                         
                         <li> 
-</li>                         
+                        </li>                         
                     </ul>                     
                 </li>                 
                 <!-- End Icons Nav -->                 
-                <li class="nav-heading">Pages</li>                 
+                <li class="nav-heading">Pagina</li>                 
                 <li class="nav-item"> <a class="nav-link collapsed" href="users-profile.html"> <i class="bi bi-person"></i> <span>Perfil</span> </a> 
                 </li>
                 <!-- End Profile Page Nav -->                 
                 <li class="nav-item"> 
-</li>
+                </li>
                 <!-- End F.A.Q Page Nav -->                 
                 <li class="nav-item"> 
-</li>
+                </li>
                 <!-- End Contact Page Nav -->                 
                 <li class="nav-item"> 
-</li>
+                </li>
                 <!-- End Register Page Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" href="Introduccion/index.html"><i class="bi bi-box-arrow-in-right"></i> <span>Cerrar Sesión</span></a> 
                 </li>
                 <!-- End Login Page Nav -->                 
                 <li class="nav-item"> 
-</li>
+                </li>
                 <!-- End Error 404 Page Nav -->                 
                 <li class="nav-item"> 
-</li>
+                </li>
                 <!-- End Blank Page Nav -->
             </ul>             
         </aside>
@@ -297,36 +269,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <li class="nav-item"> <a class="nav-link" href="index.html"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a> 
                 </li>                 
                 <!-- End Dashboard Nav -->                 
-                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-menu-button-wide"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-menu-button-wide"></i><span>Empleado</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
-                        <li> <a href="AgregarUsuario.html"> <i class="bi bi-circle"></i><span>Agregar Usuario</span> </a> 
+                        <li> <a th:href="@{/create}"> <i class="bi bi-circle"></i><span>Agregar Empleado</span> </a> 
                         </li>                         
-                        <li> <a href="VerUsuario.html"> <i class="bi bi-circle"></i><span>Ver Usuarios</span> </a> 
-                        </li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
-                        <li> 
-</li>                         
+                        <li> <a th:href="@{/empleado}"> <i class="bi bi-circle"></i><span>Ver Empleado</span> </a> 
+                        </li>                                                  
                     </ul>                     
                 </li>                 
                 <!-- End Components Nav -->                 
@@ -337,9 +285,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <li> <a href="VerPaciente.html"> <i class="bi bi-circle"></i><span>Ver Pacientes</span> </a> 
                         </li>                         
                         <li> 
-</li>                         
+                        </li>                         
                         <li> 
-</li>                         
+                        </li>                         
                     </ul>                     
                 </li>                 
                 <!-- End Forms Nav -->                 
@@ -348,14 +296,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <li> <a href="AgregarProducto.html"><i class="bi bi-circle"></i><span>Agregar Producto</span></a> <a href="VerProductos.html"> <i class="bi bi-circle"></i><span>Ver Productos</span> </a> 
                         </li>                         
                         <li> 
-</li>                         
+                        </li>                         
                     </ul>                     
                 </li>                 
                 <!-- End Tables Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-bar-chart"></i><span>Citas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style=""> 
                         <li> 
-</li>                         
+                        </li>                         
                         <li> <a href="AgregarCita.html"> <i class="bi bi-circle"></i><span>Agregar Cita</span> </a> 
                         </li>                         
                         <li> <a href="VerCita.html"> <i class="bi bi-circle"></i><span>Ver Cita</span> </a> 
@@ -365,12 +313,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- End Charts Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-gem"></i><span>Jaulas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"> 
-                        <li> <a href="AgregarJaula.html"><i class="bi bi-circle"></i><span>Agregar&nbsp; Jaulas</span></a> 
+                        <li> <a href="AgregarJaula.html"><i class="bi bi-circle"></i><span>Agregar Jaulas</span></a> 
                         </li>                         
                         <li> <a href="VerJaula.html"> <i class="bi bi-circle"></i><span>Ver Jaulas</span> </a> 
                         </li>                         
                         <li> 
-</li>                         
+                        </li>                         
                     </ul>                     
                 </li>                 
                 <!-- End Icons Nav -->                 
@@ -379,22 +327,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </li>                 
                 <!-- End Profile Page Nav -->                 
                 <li class="nav-item"> 
-</li>                 
+                </li>                 
                 <!-- End F.A.Q Page Nav -->                 
                 <li class="nav-item"> 
-</li>                 
+                </li>                 
                 <!-- End Contact Page Nav -->                 
                 <li class="nav-item"> 
-</li>                 
+                </li>                 
                 <!-- End Register Page Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" href="Introduccion/index.html"><i class="bi bi-box-arrow-in-right"></i> <span>Cerrar Sesión</span></a> 
                 </li>                 
                 <!-- End Login Page Nav -->                 
                 <li class="nav-item"> 
-</li>                 
+                </li>                 
                 <!-- End Error 404 Page Nav -->                 
                 <li class="nav-item"> 
-</li>                 
+                </li>                 
                 <!-- End Blank Page Nav -->                 
             </ul>             
         </aside>
@@ -405,79 +353,50 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- End Sidebar-->         
         <main id="main" class="main"> 
             <div class="pagetitle"> 
-                <h1>Usuarios</h1> 
+                <h1>Empleado</h1> 
                 <nav> 
                     <ol class="breadcrumb"> 
-                        <li class="breadcrumb-item"><a href="index.html">Home</a>
+                        <li class="breadcrumb-item"><a href="index.html">Principal</a>
                         </li>                         
-                        <li class="breadcrumb-item">Usuarios</li>                         
-                        <li class="breadcrumb-item active">Ver Usuarios</li>                         
+                        <li class="breadcrumb-item">Empleados</li>                         
+                        <li class="breadcrumb-item active">Ver Empleados</li>                         
                     </ol>                     
                 </nav>                 
             </div>
             <!-- End Page Title -->             
             <div class="card-body"> 
-                <h5 class="card-title">Usuarios</h5> 
-                <table class="table table-borderless datatable"> 
-                    <thead> 
-                        <tr> 
-                            <th scope="col">#</th> 
-                            <th scope="col">Usuario</th> 
-                            <th scope="col">Nombres</th> 
-                            <th scope="col">Permiso</th> 
-                            <th scope="col"></th> 
-                            <th scope="col"></th> 
-                            <th scope="col"></th> 
-                        </tr>                         
-                    </thead>                     
-                    <tbody> 
-                        <tr> 
-                            <th scope="row"><a href="#">#2457</a></th> 
-                            <td>Brandon&nbsp;</td> 
-                            <td><a href="#" class="text-primary">At praesentium minu</a></td> 
-                            <td>Administrador</td> 
-                            <td><a href="users-profile.html"><span class="badge bg-success">Ver Detalles</span></a></td> 
-                            <td><a href="AgregarUsuario.html"><span class="badge bg-warning">Editar</span></a></td> 
-                            <td><span class="badge bg-danger">Eliminar</span></td> 
-                        </tr>                         
-                        <tr> 
-                            <th scope="row"><a href="#">#2147</a></th> 
-                            <td>Bridie&nbsp;</td> 
-                            <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td> 
-                            <td>Veterinario</td> 
-                            <td><span class="badge bg-success">Ver Detalles</span></td> 
-                            <td><span class="badge bg-warning">Editar</span></td> 
-                            <td><span class="badge bg-danger">Eliminar</span></td> 
-                        </tr>                         
-                        <tr> 
-                            <th scope="row"><a href="#">#2049</a></th> 
-                            <td>Ashleigh&nbsp;</td> 
-                            <td><a href="#" class="text-primary">At recusandae consectetur</a></td> 
-                            <td>Veterinario</td> 
-                            <td><span class="badge bg-success">Ver Detalles</span></td> 
-                            <td><span class="badge bg-warning">Editar</span></td> 
-                            <td><span class="badge bg-danger">Eliminar</span></td>
-                        </tr>                         
-                        <tr> 
-                            <th scope="row"><a href="#">#2644</a></th> 
-                            <td>Angus</td> 
-                            <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td> 
-                            <td>Cliente</td> 
-                            <td><span class="badge bg-success">Ver Detalles</span></td> 
-                            <td><span class="badge bg-warning">Editar</span></td> 
-                            <td><span class="badge bg-danger">Eliminar</span></td> 
-                        </tr>                         
-                        <tr> 
-                            <th scope="row"><a href="#">#2644</a></th> 
-                            <td>Raheem&nbsp;</td> 
-                            <td><a href="#" class="text-primary">Sunt similique distinctio</a></td> 
-                            <td>Administrador</td> 
-                            <td><span class="badge bg-success">Ver Detalles</span></td> 
-                            <td><span class="badge bg-warning">Editar</span></td> 
-                            <td><span class="badge bg-danger">Eliminar</span></td>
-                        </tr>                         
-                    </tbody>                     
-                </table>                 
+                <h5 class="card-title">Lista de empleados</h5> 
+                <table class="table table-striped-columns">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombres</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Fecha Nacimiento</th>
+                            <th scope="col">Cedula</th>
+                            <th scope="col">Cedular</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="empleado: ${empleados}">
+                            <td scope="row" th:text="${empleado.id}"></td>
+                            <td scope="row" th:text="${empleado.nombres}"></td>
+                            <td scope="row" th:text="${empleado.apellidos}"></td>
+                            <td scope="row" th:text="${empleado.fecha_Nacimiento}"></td>
+                            <td scope="row" th:text="${empleado.cedula}"></td>
+                            <td scope="row" th:text="${empleado.celular}"></td>    
+                            <td scope="row" th:text="${empleado.direccion}"></td>
+                            <td scope="row" th:text="${empleado.tipo}"></td> 
+                            <td><a th:href="@{/editar/{id}(id=${empleado.id})}" class="btn btn-warning"> Editar empleado</a></td>
+                            <td><a th:href="@{/eliminar/{id}(id=${empleado.id})}" class="btn btn-danger"> Eliminar empleado</a></td>
+                        </tr>
+                    </tbody>
+                </table>                
             </div>
         </main>
         <!-- End #main -->         
