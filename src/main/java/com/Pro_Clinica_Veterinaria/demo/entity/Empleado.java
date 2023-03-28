@@ -14,6 +14,8 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.ColumnDefault;
 import org.springframework.format.annotation.DateTimeFormat;
 
+// hola roba roba
+
 @Entity
 @Table(name = "empleados")
 public class Empleado {
