@@ -22,27 +22,27 @@ public class PacienteController {
 
     @GetMapping({"/listar"})
     public String listar(Model modelo) {
-        modelo.addAttribute("especies", pacienteService.findAll());
-        return "VerEspecie";
+        modelo.addAttribute("pacientes", pacienteService.findAll());
+        return "VerPaciente";
     }
 
     @GetMapping("/crear")
     public String agregar() {
-        return "AgregarEspecie";
+        return "AgregarPaciente";
     }
 
     @PostMapping("/guardar")
     public String guardar(Paciente paciente) {
         pacienteService.save(paciente);
-        return "redirect:/Especie/listar";
+        return "redirect:/Paciente/listar";
     }
 
     @GetMapping("/editar/{id}")
     public String edit(@PathVariable(value = "id") Integer id, Model modelo) {
         Paciente p = (Paciente) pacienteService.findOne(id);
         log.info("Objeto recuperado {}", p);
-        modelo.addAttribute("especie", p);
-        return "DetallesEspecies";
+        modelo.addAttribute("paciente", p);
+        return "DetallesPacientes";
     }
 
     @GetMapping("/eliminar/{id}")
@@ -50,6 +50,6 @@ public class PacienteController {
         Paciente p = (Paciente) pacienteService.findOne(id);
         log.info("Objeto recuperado {}", p);
         pacienteService.delete(id);
-        return "redirect:/Especie/listar";
+        return "redirect:/Paciente/listar";
     }
 }

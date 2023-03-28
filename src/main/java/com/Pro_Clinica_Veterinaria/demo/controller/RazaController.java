@@ -22,27 +22,27 @@ public class RazaController {
 
     @GetMapping({"/listar"})
     public String listar(Model modelo) {
-        modelo.addAttribute("clientes", razaService.findAll());
-        return "VerCliente";
+        modelo.addAttribute("razas", razaService.findAll());
+        return "VerRaza";
     }
 
     @GetMapping("/crear")
     public String agregar() {
-        return "AgregarCliente";
+        return "AgregarRaza";
     }
 
     @PostMapping("/guardar")
     public String guardar(Raza raza) {
         razaService.save(raza);
-        return "redirect:/Cliente/listar";
+        return "redirect:/Raza/listar";
     }
 
     @GetMapping("/editar/{id}")
     public String edit(@PathVariable(value = "id") Integer id, Model modelo) {
         Raza r = razaService.findOne(id);
         log.info("Objeto recuperado {}", r);
-        modelo.addAttribute("cliente", r);
-        return "DetallesClientes";
+        modelo.addAttribute("raza", r);
+        return "DetallesRazas";
     }
 
     @GetMapping("/eliminar/{id}")
@@ -50,6 +50,6 @@ public class RazaController {
         Raza r = razaService.findOne(id);
         log.info("Objeto recuperado {}", r);
         razaService.delete(id);
-        return "redirect:/Cliente/listar";
+        return "redirect:/Raza/listar";
     }
 }
