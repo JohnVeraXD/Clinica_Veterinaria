@@ -1,4 +1,3 @@
-
 package com.Pro_Clinica_Veterinaria.demo.services;
 
 import com.Pro_Clinica_Veterinaria.demo.entity.Especie;
@@ -12,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class EspecieServiceImpl implements EspecieService {
+
     @Autowired
     private EspecieRepository especieRepository;
 
@@ -21,6 +21,7 @@ public class EspecieServiceImpl implements EspecieService {
         return (List<Especie>) especieRepository.findAll();
     }
 
+    @Override
     @Transactional
     public void save(Especie especie) {
         especieRepository.save(especie);
@@ -43,11 +44,4 @@ public class EspecieServiceImpl implements EspecieService {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Object findAll(Object pageable) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void save(Object especie) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

@@ -22,6 +22,7 @@ public class PacienteServiceImpl implements PacienteService {
     }
 
     @Transactional
+    @Override
     public void save(Paciente paciente) {
         pacienteRepository.save(paciente);
     }
@@ -38,18 +39,9 @@ public class PacienteServiceImpl implements PacienteService {
         return pacienteRepository.findById(id).orElse(null);
     }
 
-   
     @Override
     public Page<Paciente> findAll(Pageable pageable) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-      public Object findAll(Object pageable) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void save(Object especie) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

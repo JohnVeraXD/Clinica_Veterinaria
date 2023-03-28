@@ -1,4 +1,3 @@
-
 package com.Pro_Clinica_Veterinaria.demo.services;
 
 import com.Pro_Clinica_Veterinaria.demo.entity.Raza;
@@ -10,11 +9,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 @Service
 public class RazaServiceImpl implements RazaService {
 
-   @Autowired
+    @Autowired
     private RazaRepository razaRepository;
 
     @Override
@@ -24,6 +22,7 @@ public class RazaServiceImpl implements RazaService {
     }
 
     @Transactional
+    @Override
     public void save(Raza raza) {
         razaRepository.save(raza);
     }
@@ -45,11 +44,4 @@ public class RazaServiceImpl implements RazaService {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Object findAll(Object pageable) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void save(Object especie) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

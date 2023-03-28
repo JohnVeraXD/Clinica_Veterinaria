@@ -14,7 +14,7 @@
         <link href="https://fonts.gstatic.com" rel="preconnect"> 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> 
         <!-- Vendor CSS Files -->         
-        
+
         <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
         <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
         <link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}" rel='stylesheet'>
@@ -23,9 +23,9 @@
         <link th:href="@{/assets/vendor/remixicon/remixicon.css}" rel="stylesheet">
         <link th:href="@{/assets/vendor/simple-datatables/style.css}" rel="stylesheet">
         <!-- Template Main CSS File -->         
-        
+
         <link th:href="@{/assets/css/style.css}" rel="stylesheet">
-        
+
         <!-- =======================================================
   * Template Name: NiceAdmin - v2.5.0
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -36,7 +36,7 @@
     <body> 
         <!-- ======= Header ======= -->         
         <header id="header" class="header fixed-top d-flex align-items-center"> 
-            <div class="d-flex align-items-center justify-content-between"> <a href="index.html" class="logo d-flex align-items-center"><img alt="" src="Introduccion/assets/img/512x512bb.jpg"> <span class="d-none d-lg-block">MyCanDB</span></a> <i class="bi bi-list toggle-sidebar-btn"></i> 
+            <div class="d-flex align-items-center justify-content-between"> <a href="/MenuPrincipalAdmin" class="logo d-flex align-items-center"><img alt="" th:src="@{/assets/img/512x512bb.jpg}"> <span class="d-none d-lg-block">MyCanDB</span></a> <i class="bi bi-list toggle-sidebar-btn"></i> 
             </div>
             <!-- End Logo -->             
             <div class="search-bar"> 
@@ -54,40 +54,30 @@
                     <!-- End Search Icon-->                     
                     <li class="nav-item dropdown"> <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge bg-primary badge-number"></span> </a>
                         <!-- End Notification Icon -->                         
-                        
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications"> 
+
+                        </ul>
                         <!-- End Notification Dropdown Items -->                         
                     </li>
                     <!-- End Notification Nav -->                     
                     <li class="nav-item dropdown"> <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-chat-left-text"></i> <span class="badge bg-success badge-number"></span> </a>
                         <!-- End Messages Icon -->                         
-                        
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages"> 
+
+                        </ul>
                         <!-- End Messages Dropdown Items -->                         
                     </li>
                     <!-- End Messages Nav -->                     
-                    <li class="nav-item dropdown pe-3"> <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown"> <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span> </a>
+                    <li class="nav-item dropdown pe-3"> <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown"> <img th:src="@{/assets/img/profile-img.jpg}" alt="Profile" class="rounded-circle"> <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span> </a>
                         <!-- End Profile Iamge Icon -->                         
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"> 
                             <li class="dropdown-header"> 
                                 <h6>John Vera</h6> <span>Administrador</span> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
+                            </li>                                                        
                             <li> <a class="dropdown-item d-flex align-items-center" href="users-profile.html"> <i class="bi bi-person"></i> <span>Mi Perfil</span> </a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
+                            </li>                                                         
                             <li> <a class="dropdown-item d-flex align-items-center" href="users-profile.html"> <i class="bi bi-gear"></i> <span>Configuración</span> </a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
-                            <li> <a class="dropdown-item d-flex align-items-center" href="pages-faq.html"> <i class="bi bi-question-circle"></i> <span>Ayuda</span> </a> 
-                            </li>                             
-                            <li> 
-                                <hr class="dropdown-divider"> 
-                            </li>                             
+                            </li>                                                                                     
                             <li> <a class="dropdown-item d-flex align-items-center" th:href="@{/logout}"> <i class="bi bi-box-arrow-right"></i> <span>Cerrar Sesión</span> </a> 
                             </li>                             
                         </ul>
@@ -102,72 +92,105 @@
         <!-- ======= Sidebar ======= -->         
         <aside id="sidebar" class="sidebar"> 
             <ul class="sidebar-nav" id="sidebar-nav">
-                <li class="nav-item"> <a class="nav-link" href="index.html"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a> 
+                <li class="nav-item"> <a class="nav-link" href="/MenuPrincipalAdmin"> <i class="bi bi-grid"></i> <span>Menu principal</span> </a> 
                 </li>
-                <!-- End Dashboard Nav -->                 
-                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-people-fill"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                 <!-- End Dashboard Nav -->
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#usuario-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-person-badge"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                    <ul id="usuario-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
+                        <li> <a href="/Usuario/crear"> <i class="bi bi-circle"></i><span>Agregar Usuario</span> </a> 
+                        </li>                         
+                        <li> <a href="/Usuario/listar"> <i class="bi bi-circle"></i><span>Ver Usuarios</span> </a> 
+                        </li>
+                    </ul>                     
+                </li>
+                <!-- End Dashboard Nav -->
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi-person-circle"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
                         <li> <a href="/Empleado/crear"> <i class="bi bi-circle"></i><span>Agregar Empleado</span> </a> 
                         </li>                         
-                        <li> <a href="/Empleado/listar"> <i class="bi bi-circle"></i><span>Ver Empleado</span> </a> 
+                        <li> <a href="/Empleado/listar"> <i class="bi bi-circle"></i><span>Ver Empleados</span> </a> 
+                        </li>
+                    </ul>                     
+                </li>
+                <!-- End Dashboard Nav -->                 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#cliente-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-people-fill"></i><span>Clientes</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                    <ul id="cliente-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
+                        <li> <a href="/Cliente/crear"> <i class="bi bi-circle"></i><span>Agregar Cliente</span> </a> 
+                        </li>                         
+                        <li> <a href="/Cliente/listar"> <i class="bi bi-circle"></i><span>Ver Clientes</span> </a> 
                         </li>
                     </ul>                     
                 </li>
                 <!-- End Components Nav -->                 
-                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-journal-text"></i><span>Pacientes</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-github"></i><span>Mascotas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
-                        <li> <a href="AgregarPaciente.html"> <i class="bi bi-circle"></i><span>Agregar Pacientes</span> </a> 
+                        <li> <a href="/Mascota/crear"> <i class="bi bi-circle"></i><span>Agregar Mascota</span> </a> 
                         </li>                         
-                        <li> <a href="VerPaciente.html"> <i class="bi bi-circle"></i><span>Ver Pacientes</span> </a> 
+                        <li> <a href="/Mascota/listar"> <i class="bi bi-circle"></i><span>Ver Mascotas</span> </a> 
                         </li>                                                 
                     </ul>                     
-                </li>
-                <!-- End Forms Nav -->                 
-
+                </li>            
                 <!-- End Tables Nav -->                 
                 <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-calendar2-check"></i><span>Citas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
-                    <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav"> 
-                        <li> 
-</li>                         
-                        <li> <a href="AgregarCita.html"> <i class="bi bi-circle"></i><span>Agregar Cita</span> </a> 
+                    <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">               
+                        <li> <a href="/Cita/crear"> <i class="bi bi-circle"></i><span>Agregar Cita</span> </a> 
                         </li>                         
-                        <li> <a href="VerCita.html"> <i class="bi bi-circle"></i><span>Ver Cita</span> </a> 
+                        <li> <a href="/Cita/listar"> <i class="bi bi-circle"></i><span>Ver Cita</span> </a> 
+                        </li>                         
+                    </ul>                     
+                </li>
+                 <!-- End Tables Nav -->                 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#histocli-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi-house-heart-fill"></i><span>Historial Clinico</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                    <ul id="histocli-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">               
+                        <li> <a href="/Historial/crear"> <i class="bi bi-circle"></i><span>Agregar Historial Clinico</span> </a> 
+                        </li>                         
+                        <li> <a href="/Historial/listar"> <i class="bi bi-circle"></i><span>Ver Historiales Clincicos</span> </a> 
+                        </li>                         
+                    </ul>                     
+                </li>
+                 <!-- End Tables Nav -->                 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#factura-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi-currency-exchange"></i><span>Facturación</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                    <ul id="factura-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">               
+                        <li> <a href="/Factura/crear"> <i class="bi bi-circle"></i><span>Crear Factura</span> </a> 
+                        </li>                         
+                        <li> <a href="/Factura/listar"> <i class="bi bi-circle"></i><span>Ver Facturas</span> </a> 
                         </li>                         
                     </ul>                     
                 </li>
                 <!-- End Charts Nav -->                 
-                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-bricks"></i><span>Jaulas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi bi-bricks"></i><span>Jaulas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
                     <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"> 
-                        <li> <a href="AgregarJaula.html"><i class="bi bi-circle"></i><span>Agregar&nbsp; Jaulas</span></a> 
+                        <li> <a href="/Jaula/crear"> <i class="bi bi-circle"></i><span>Agregar Jaula</span></a> 
                         </li>                         
-                        <li> <a href="VerJaula.html"> <i class="bi bi-circle"></i><span>Ver Jaulas</span> </a> 
+                        <li> <a href="/Jaula/listar"> <i class="bi bi-circle"></i><span>Ver Jaulas</span> </a> 
+                        </li>                                      
+                    </ul>                     
+                </li> 
+                <!-- End Charts Nav -->                 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#especie-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi-heptagon-half"></i><span>Especies</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                    <ul id="especie-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"> 
+                        <li> <a href="/Especie/crear"> <i class="bi bi-circle"></i><span>Agregar Especie</span></a> 
                         </li>                         
-                        <li> 
-</li>                         
+                        <li> <a href="/Especie/listar"> <i class="bi bi-circle"></i><span>Ver Especies</span> </a> 
+                        </li>                                      
+                    </ul>                     
+                </li> 
+                <!-- End Charts Nav -->                 
+                <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#raza-nav" data-bs-toggle="collapse" href="#" aria-expanded="false"> <i class="bi-hexagon-fill"></i><span>Razas</span><i class="bi bi-chevron-down ms-auto"></i> </a> 
+                    <ul id="raza-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"> 
+                        <li> <a href="/Raza/crear"> <i class="bi bi-circle"></i><span>Agregar Raza</span></a> 
+                        </li>                         
+                        <li> <a href="/Raza/listar"> <i class="bi bi-circle"></i><span>Ver Razas</span> </a> 
+                        </li>                                      
                     </ul>                     
                 </li>                 
                 <!-- End Icons Nav -->                 
-                <li class="nav-heading">Pages</li>                 
-                <li class="nav-item"> <a class="nav-link collapsed" href="users-profile.html"> <i class="bi bi-person"></i> <span>Perfil</span> </a> 
+                <li class="nav-heading">Paginas</li>                 
+                <li class="nav-item"> <a class="nav-link collapsed" href="/perfil"> <i class="bi bi-person"></i> <span>Perfil</span> </a> 
                 </li>
-                <!-- End Profile Page Nav -->                 
-                <li class="nav-item"> 
-</li>
-                <!-- End F.A.Q Page Nav -->                 
-                <li class="nav-item"> 
-</li>
-                <!-- End Contact Page Nav -->                 
-                <li class="nav-item"> 
-</li>
                 <!-- End Register Page Nav -->                 
-                <li class="nav-item"> <a class="nav-link collapsed" href="Introduccion/index.html"><i class="bi bi-box-arrow-in-right"></i> <span>Cerrar Sesión</span></a> 
+                <li class="nav-item"> <a class="nav-link collapsed" href="/logout"><i class="bi bi-box-arrow-in-right"></i> <span>Cerrar Sesión</span></a> 
                 </li>
-                <!-- End Login Page Nav -->                 
-                <li class="nav-item"> 
-</li>
-                <!-- End Error 404 Page Nav -->                 
-                <li class="nav-item"> 
-</li>
                 <!-- End Blank Page Nav -->
             </ul>             
         </aside>
@@ -177,7 +200,7 @@
                 <h1>Panel</h1> 
                 <nav> 
                     <ol class="breadcrumb"> 
-                        <li class="breadcrumb-item"><a href="index.html">Home</a>
+                        <li class="breadcrumb-item"><a href="/MenuPrincipalAdmin">Menu Principal</a>
                         </li>                         
                         <li class="breadcrumb-item active">Panel</li>                         
                     </ol>                     
@@ -195,7 +218,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -206,7 +229,7 @@
                                         </ul>                                         
                                     </div>                                     
                                     <div class="card-body"> 
-                                        <h5 class="card-title">Ventas&nbsp;<span>| Hoy</span></h5> 
+                                        <h5 class="card-title"><span><font color="#012970"><span style="font-size: 18px;">Ventas</span></font>| Este Año</span></h5> 
                                         <div class="d-flex align-items-center"> 
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-cart"></i> 
                                             </div>                                             
@@ -224,7 +247,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -235,7 +258,7 @@
                                         </ul>                                         
                                     </div>                                     
                                     <div class="card-body"> 
-                                        <h5 class="card-title">Ganancias&nbsp;<span>| Este mes</span></h5> 
+                                        <h5 class="card-title"><span><font color="#012970"><span style="font-size: 18px;">Ganancias</span></font>| Este Año</span></h5> 
                                         <div class="d-flex align-items-center"> 
                                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i class="bi bi-currency-dollar"></i> 
                                             </div>                                             
@@ -253,7 +276,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -282,7 +305,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -311,7 +334,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -340,7 +363,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -369,7 +392,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -380,61 +403,61 @@
                                         </ul>                                         
                                     </div>                                     
                                     <div class="card-body"> 
-                                        <h5 class="card-title">Reportes de Ventas&nbsp;<span>/Hoy</span></h5> 
+                                        <h5 class="card-title">Reportes de Ventas;<span>/Hoy</span></h5> 
                                         <!-- Line Chart -->                                         
                                         <div id="reportsChart"></div>                                         
                                         <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new ApexCharts(document.querySelector("#reportsChart"), {
-                        series: [{
-                          name: 'Ventas Mensuales',
-                          data: [31, 40, 28, 51, 42, 82, 56]
-                        }, {
-                          name: 'Ventas Anuales',
-                          data: [11, 32, 45, 32, 34, 52, 41]
-                        }, {
-                          name: 'Ventas Diarias',
-                          data: [15, 11, 32, 18, 9, 24, 11]
-                        }],
-                        chart: {
-                          height: 350,
-                          type: 'area',
-                          toolbar: {
-                            show: false
-                          }
-                        },
-                        markers: {
-                          size: 4
-                        },
-                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                        fill: {
-                          type: "gradient",
-                          gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.3,
-                            opacityTo: 0.4,
-                            stops: [0, 90, 100]
-                          }
-                        },
-                        dataLabels: {
-                          enabled: false
-                        },
-                        stroke: {
-                          curve: 'smooth',
-                          width: 2
-                        },
-                        xaxis: {
-                          type: 'datetime',
-                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-                        },
-                        tooltip: {
-                          x: {
-                            format: 'dd/MM/yy HH:mm'
-                          }
-                        }
-                      }).render();
-                    });
-                  </script>                                         
+                                            document.addEventListener("DOMContentLoaded", () => {
+                                                new ApexCharts(document.querySelector("#reportsChart"), {
+                                                    series: [{
+                                                            name: 'Ventas Mensuales',
+                                                            data: [31, 40, 28, 51, 42, 82, 56]
+                                                        }, {
+                                                            name: 'Ventas Anuales',
+                                                            data: [11, 32, 45, 32, 34, 52, 41]
+                                                        }, {
+                                                            name: 'Ventas Diarias',
+                                                            data: [15, 11, 32, 18, 9, 24, 11]
+                                                        }],
+                                                    chart: {
+                                                        height: 350,
+                                                        type: 'area',
+                                                        toolbar: {
+                                                            show: false
+                                                        }
+                                                    },
+                                                    markers: {
+                                                        size: 4
+                                                    },
+                                                    colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                                                    fill: {
+                                                        type: "gradient",
+                                                        gradient: {
+                                                            shadeIntensity: 1,
+                                                            opacityFrom: 0.3,
+                                                            opacityTo: 0.4,
+                                                            stops: [0, 90, 100]
+                                                        }
+                                                    },
+                                                    dataLabels: {
+                                                        enabled: false
+                                                    },
+                                                    stroke: {
+                                                        curve: 'smooth',
+                                                        width: 2
+                                                    },
+                                                    xaxis: {
+                                                        type: 'datetime',
+                                                        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                                    },
+                                                    tooltip: {
+                                                        x: {
+                                                            format: 'dd/MM/yy HH:mm'
+                                                        }
+                                                    }
+                                                }).render();
+                                            });
+                                        </script>                                         
                                         <!-- End Line Chart -->                                         
                                     </div>                                     
                                 </div>                                 
@@ -446,7 +469,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -465,7 +488,7 @@
                                     <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                             <li class="dropdown-header text-start"> 
-                                                <h6>Filter</h6> 
+                                                <h6>Filtros</h6> 
                                             </li>                                             
                                             <li><a class="dropdown-item" href="#">Hoy</a>
                                             </li>                                             
@@ -499,49 +522,9 @@
                                 </ul>                                 
                             </div>                             
                             <div class="card-body"> 
-                                <h5 class="card-title">Agenda&nbsp;<span>| Hoy</span></h5> 
+                                <h5 class="card-title">Agenda;<span> Hoy</span></h5> 
                                 <div class="activity"> 
-                                    <div class="activity-item d-flex"> 
-                                        <div class="activite-label">7:30 am</div>                                         <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i> 
-                                        <div class="activity-content"> 
-                                            Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
-                                        </div>                                         
-                                    </div>
-                                    <!-- End activity item-->                                     
-                                    <div class="activity-item d-flex"> 
-                                        <div class="activite-label">8:30 am</div>                                         <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i> 
-                                        <div class="activity-content"> 
-                                            Voluptatem blanditiis blanditiis eveniet
-</div>                                         
-                                    </div>
-                                    <!-- End activity item-->                                     
-                                    <div class="activity-item d-flex"> 
-                                        <div class="activite-label">10:30 am</div>                                         <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i> 
-                                        <div class="activity-content"> 
-                                            Voluptates corrupti molestias voluptatem
-</div>                                         
-                                    </div>
-                                    <!-- End activity item-->                                     
-                                    <div class="activity-item d-flex"> 
-                                        <div class="activite-label">11:30 am</div>                                         <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i> 
-                                        <div class="activity-content"> 
-                                            Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
-                                        </div>                                         
-                                    </div>
-                                    <!-- End activity item-->                                     
-                                    <div class="activity-item d-flex"> 
-                                        <div class="activite-label">12:30 am</div>                                         <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i> 
-                                        <div class="activity-content"> 
-                                            Est sit eum reiciendis exercitationem
-</div>                                         
-                                    </div>
-                                    <!-- End activity item-->                                     
-                                    <div class="activity-item d-flex"> 
-                                        <div class="activite-label">2:30 am</div>                                         <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i> 
-                                        <div class="activity-content"> 
-                                            Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
-</div>                                         
-                                    </div>
+
                                     <!-- End activity item-->                                     
                                 </div>                                 
                             </div>                             
@@ -552,7 +535,7 @@
                             <div class="filter"> <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a> 
                                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"> 
                                     <li class="dropdown-header text-start"> 
-                                        <h6>Filter</h6> 
+                                        <h6>Filtros</h6> 
                                     </li>                                     
                                     <li><a class="dropdown-item" href="#">Hoy</a>
                                     </li>                                     
@@ -564,66 +547,66 @@
                             </div>                             
                             <div class="card-body pb-0"> 
                                 <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
-                    legend: {
-                      data: ['Allocated Budget', 'Actual Spending']
-                    },
-                    radar: {
-                      // shape: 'circle',
-                      indicator: [{
-                          name: 'Sales',
-                          max: 6500
-                        },
-                        {
-                          name: 'Administration',
-                          max: 16000
-                        },
-                        {
-                          name: 'Information Technology',
-                          max: 30000
-                        },
-                        {
-                          name: 'Customer Support',
-                          max: 38000
-                        },
-                        {
-                          name: 'Development',
-                          max: 52000
-                        },
-                        {
-                          name: 'Marketing',
-                          max: 25000
-                        }
-                      ]
-                    },
-                    series: [{
-                      name: 'Budget vs spending',
-                      type: 'radar',
-                      data: [{
-                          value: [4200, 3000, 20000, 35000, 50000, 18000],
-                          name: 'Allocated Budget'
-                        },
-                        {
-                          value: [5000, 14000, 28000, 26000, 42000, 21000],
-                          name: 'Actual Spending'
-                        }
-                      ]
-                    }]
-                  });
-                });
-              </script>                                 
+                                    document.addEventListener("DOMContentLoaded", () => {
+                                        var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
+                                            legend: {
+                                                data: ['Allocated Budget', 'Actual Spending']
+                                            },
+                                            radar: {
+                                                // shape: 'circle',
+                                                indicator: [{
+                                                        name: 'Sales',
+                                                        max: 6500
+                                                    },
+                                                    {
+                                                        name: 'Administration',
+                                                        max: 16000
+                                                    },
+                                                    {
+                                                        name: 'Information Technology',
+                                                        max: 30000
+                                                    },
+                                                    {
+                                                        name: 'Customer Support',
+                                                        max: 38000
+                                                    },
+                                                    {
+                                                        name: 'Development',
+                                                        max: 52000
+                                                    },
+                                                    {
+                                                        name: 'Marketing',
+                                                        max: 25000
+                                                    }
+                                                ]
+                                            },
+                                            series: [{
+                                                    name: 'Budget vs spending',
+                                                    type: 'radar',
+                                                    data: [{
+                                                            value: [4200, 3000, 20000, 35000, 50000, 18000],
+                                                            name: 'Allocated Budget'
+                                                        },
+                                                        {
+                                                            value: [5000, 14000, 28000, 26000, 42000, 21000],
+                                                            name: 'Actual Spending'
+                                                        }
+                                                    ]
+                                                }]
+                                        });
+                                    });
+                                </script>                                 
                             </div>                             
                         </div>
                         <!-- End Budget Report -->                         
                         <!-- Website Traffic -->                         
                         <div class="card"> 
-</div>
+                        </div>
                         <!-- End Website Traffic -->                         
                         <!-- News & Updates Traffic -->                         
                         <div class="card"> 
                             <div class="filter"> 
-</div>                             
+                            </div>                             
                         </div>
                         <!-- End News & Updates -->                         
                     </div>
@@ -650,6 +633,6 @@
         <script th:src="@{/assets/vendor/php-email-form/validate.js}"></script> 
         <!-- Template Main JS File -->
         <script th:src="@{/assets/js/main.js}"></script>
-        
+
     </body>     
 </html>
