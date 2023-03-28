@@ -51,6 +51,13 @@ public class Empleado {
     @Column(name = "estado", nullable = true, unique = false, length = 10)
     @ColumnDefault("'Activo'")
     private String estado;
+    
+    
+    @Column(name = "hola", nullable = true, unique = false, length = 10)
+    private String hola;
+    
+     @Column(name = "activo", nullable = true, unique = false, length = 10)
+    private String activo;
 
     @OneToMany(mappedBy = "empleado")
     private List<Usuario> Usuarios;
