@@ -15,11 +15,14 @@ import org.hibernate.annotations.ColumnDefault;
 import org.springframework.format.annotation.DateTimeFormat;
 
 // hola roba roba
-
+//777777777
 @Entity
 @Table(name = "empleados")
 public class Empleado {
 
+    @Column(name = "asd", nullable = true, unique = false, length = 50)
+    private String asd;
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -51,13 +54,6 @@ public class Empleado {
     @Column(name = "estado", nullable = true, unique = false, length = 10)
     @ColumnDefault("'Activo'")
     private String estado;
-    
-    
-    @Column(name = "hola", nullable = true, unique = false, length = 10)
-    private String hola;
-    
-     @Column(name = "activo", nullable = true, unique = false, length = 10)
-    private String activo;
 
     @OneToMany(mappedBy = "empleado")
     private List<Usuario> Usuarios;
