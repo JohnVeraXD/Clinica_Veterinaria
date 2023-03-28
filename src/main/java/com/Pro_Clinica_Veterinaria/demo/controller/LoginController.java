@@ -34,30 +34,34 @@ public class LoginController {
         return "index";
     }
 
+    @GetMapping("/logout")
+    public String cerrarSesion(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
+    }
+
     @PostMapping("/login")
-    public String procesarLogin(@RequestParam(value = "nombreUsuario") String nombreUsuario, @RequestParam(value = "contrasenia") String contrasenia, Model model,HttpSession sesion) {
+    public String procesarLogin(@RequestParam(value = "nombreUsuario") String nombreUsuario, @RequestParam(value = "contrasenia") String contrasenia, Model model, HttpSession sesion) {
 
         Usuario user = userRepository.findByNombreUsuarioAndContrasenia(nombreUsuario, contrasenia);
         if (user != null) {
-            sesion.setAttribute("user", nombreUsuario);
-            
-            if(user.getRole().equals("admin")){
-                return "VerCita";
+            sesion.setAttribute("user", user);
+
+            if (user.getRole().equals("admin")) {
+                return "redirect:/MenuPrincipalAdmin";
             } else if (user.getRole().equals("recepcionista")) {
                 return "principal";
             } else if (user.getRole().equals("veterinario")) {
                 return "principal";
             } else {
-                return "principal";
+                return "redirect:/MenuPrincipal";
             }
         } else {
             return "index";
         }
     }
 
-    
-
-   /*
+    /*
     @PostMapping("/Iniciar")
     public String procesarFormulario(@RequestParam String nombreUsuario,
                                      @RequestParam String contrasenia,
@@ -76,5 +80,4 @@ public class LoginController {
         return "redirect:/Login?error";
     }
      */
-
 }

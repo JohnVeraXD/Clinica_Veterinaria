@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RequestMapping("/principal")
 public class PrincipalController {
     
-    @GetMapping("/ingresar")
+    @GetMapping("/MenuPrincipalAdmin")
     public String MenuPrincipal() {
         return "principal";
     }

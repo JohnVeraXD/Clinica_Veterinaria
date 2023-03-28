@@ -41,6 +41,6 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 
     @Override
     public Page<Empleado> findAll(Pageable pageable) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
