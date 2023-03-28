@@ -14,15 +14,10 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.ColumnDefault;
 import org.springframework.format.annotation.DateTimeFormat;
 
-// hola roba roba
-//777777777
 @Entity
 @Table(name = "empleados")
 public class Empleado {
-
-    @Column(name = "asd", nullable = true, unique = false, length = 50)
-    private String asd;
-    
+ 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

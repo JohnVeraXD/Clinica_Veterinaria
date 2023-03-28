@@ -147,6 +147,35 @@ public class Paciente {
         this.estado = estado;
     }
 
+    public Paciente() {
+    }
+    
+    public Paciente(Integer id, String nombre, Integer idCliente, Integer idraza, Integer idespecie, String sexo, String color, String fotoDeLaMascota, Date fecha_Nacimiento, String estado) {
+        this.id = id;
+        this.nombre = nombre;
+        this.idCliente = idCliente;
+        this.idraza = idraza;
+        this.idespecie = idespecie;
+        this.sexo = sexo;
+        this.color = color;
+        this.fotoDeLaMascota = fotoDeLaMascota;
+        this.fecha_Nacimiento = fecha_Nacimiento;
+        this.estado = estado;
+    }
+
+    public Paciente(Integer id, String nombre, Integer idCliente, Integer idraza, Integer idespecie, String sexo, String color, String fotoDeLaMascota, Date fecha_Nacimiento) {
+        this.id = id;
+        this.nombre = nombre;
+        this.idCliente = idCliente;
+        this.idraza = idraza;
+        this.idespecie = idespecie;
+        this.sexo = sexo;
+        this.color = color;
+        this.fotoDeLaMascota = fotoDeLaMascota;
+        this.fecha_Nacimiento = fecha_Nacimiento;
+    }
+
+    
     @Override
     public int hashCode() {
         final int prime = 31;

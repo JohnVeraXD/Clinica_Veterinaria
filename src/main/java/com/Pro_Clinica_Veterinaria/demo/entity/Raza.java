@@ -34,7 +34,7 @@ public class Raza {
     @JoinColumn(name = "idEspecie", referencedColumnName = "id", insertable = false, updatable = false)
     private Especie Especies;
 
-    @OneToMany(mappedBy = "raza")
+    @OneToMany(mappedBy = "razas")
     private List<Paciente> pacientes;
 
     public Integer getId() {

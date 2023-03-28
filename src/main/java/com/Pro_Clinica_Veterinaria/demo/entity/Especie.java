@@ -24,10 +24,10 @@ public class Especie {
     @Column(name = "descripcion", nullable = true, unique = false, length = 100)
     private String descripcion;
 
-    @OneToMany(mappedBy = "especie")
+    @OneToMany(mappedBy = "especies")
     private List<Paciente> pacientes;
 
-    @OneToMany(mappedBy = "raza")
+    @OneToMany(mappedBy = "Especies")
     private List<Raza> razas;
 
     public Integer getId() {
@@ -55,13 +55,6 @@ public class Especie {
     }
 
     public Especie() {
-    }
-
-    public Especie(Integer id, String nombreEspecie, String descripcion, List<Paciente> pacientes) {
-        this.id = id;
-        this.nombreEspecie = nombreEspecie;
-        this.descripcion = descripcion;
-        this.pacientes = pacientes;
     }
 
     public Especie(Integer id, String nombreEspecie, String descripcion) {
