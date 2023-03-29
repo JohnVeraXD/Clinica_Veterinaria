@@ -214,43 +214,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </div>
             <!-- End Page Title -->             
             <section class="section profile"> 
-                <div class="row"> 
-                    <div class="col-xl-4"> 
-                        <div class="card"> 
-                            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                                <img th:src="@{'/assets/img/' + ${empleado.foto}}"
-                                     th:alf="${empleado.foto}"
-                                     style='max-width: 100%'
-                                     alt="Profile" class="rounded-circle"></img>
-                                <h2 th:text="${empleado.nombres}"></h2> 
-                                <h3 th:text="${empleado.tipo}"></h3>                               
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                    <div class="col-xl-8"> 
+                <div class="row">                  
+                    <div class="col-xl-9"> 
                         <div class="card"> 
                             <div class="card-body pt-3"> 
                                 <!-- Bordered Tabs -->
                                 <div
                                     <ul class="nav nav-tabs nav-tabs-bordered">                                     
                                     <li class="nav-item"> 
-                                        <h4>Editar información del Empleado</h4>                                         
+                                        <h4>Editar información del Cliente</h4>                                         
                                     </li>                                                                                                             
                                     </ul>
                                 </div>
                                 <div> 
                                     <!-- Profile Edit Form -->
-                                    <form th:action="@{/Empleado/guardar}" method="post" enctype="multipart/form-data"> 
+                                    <form th:action="@{/Cliente/guardar}" method="post" enctype="multipart/form-data"> 
 
-                                        <input type="hidden" name="id" th:value="${empleado.id}"></input>
+                                        <input type="hidden" name="id" th:value="${cliente.id}"></input>
 
                                         <div class="row mb-3"> 
                                             <label for="inputText" class="col-sm-2 col-form-label">Nombres</label>                                 
                                             <div class="col-sm-10"> 
                                                 <input type="text" class="form-control" id="formGroupExampleInput"
                                                        name="nombres"
-                                                       placeholder="Escriba los nombres del empleado"
-                                                       th:value="${empleado.nombres}">
+                                                       placeholder="Escriba los nombres del cliente"
+                                                       th:value="${cliente.nombres}">
                                             </div>                                 
                                         </div>                             
                                         <div class="row mb-3"> 
@@ -258,30 +246,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="col-sm-10"> 
                                                 <input type="text" class="form-control" id="formGroupExampleInput2"
                                                        name="apellidos"
-                                                       placeholder="Escriba los apellidos del empleado"
-                                                       th:value="${empleado.apellidos}">
+                                                       placeholder="Escriba los apellidos del cliente"
+                                                       th:value="${cliente.apellidos}">
                                             </div>                                 
                                         </div> 
                                         <div class="row mb-3"> 
-                                            <label for="inputDate" class="col-sm-2 col-form-label">Fecha de nacimiento</label>                                 
+                                            <label for="inputText" class="col-sm-2 col-form-label">Correo electronico</label>                                 
                                             <div class="col-sm-10"> 
-                                                <input type="date" class="form-control" id="formGroupExampleInput3"
-                                                       name="fecha_Nacimiento"
+                                                <input type="text" class="form-control" id="formGroupExampleInput3"
+                                                       name="correoElectronico"
                                                        placeholder="Proporcione la fecha de nacimiento"
-                                                       th:value="${empleado.fecha_Nacimiento}">
+                                                       th:value="${cliente.correoElectronico}">
                                             </div>                                 
-                                        </div>
-                                        <div class="row mb-3"> 
-                                            <label for="inputText" class="col-sm-2 col-form-label">Cedula</label>                                 
-                                            <div class="col-sm-10"> 
-                                                <input type="text" class="form-control" id="formGroupExampleInput4"
-                                                       name="cedula"
-                                                       placeholder="Proporcione la cedula"
-                                                       pattern="[0-9]+"
-                                                       maxlength="10"
-                                                       th:value="${empleado.cedula}">
-                                            </div>                                 
-                                        </div>
+                                        </div>                
                                         <div class="row mb-3"> 
                                             <label for="inputText" class="col-sm-2 col-form-label">Celular</label>                                 
                                             <div class="col-sm-10"> 
@@ -290,7 +267,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                        placeholder="Proporcione el celular"
                                                        pattern="[0-9]+"
                                                        maxlength="10"
-                                                       th:value="${empleado.celular}">
+                                                       th:value="${cliente.celular}">
                                             </div>                                 
                                         </div>
                                         <div class="row mb-3"> 
@@ -299,25 +276,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 <input type="text" class="form-control" id="formGroupExampleInput6"
                                                        name="direccion"
                                                        placeholder="Proporcione la direccion"
-                                                       th:value="${empleado.direccion}">
+                                                       th:value="${cliente.direccion}">
                                             </div>                                 
-                                        </div>
-                                        <div class="row mb-3"> 
-                                            <label for="inputText" class="col-sm-2 col-form-label">Tipo</label>                                 
-                                            <div class="col-sm-10"> 
-                                                <input type="text" class="form-control" id="formGroupExampleInput7"
-                                                       name="tipo"
-                                                       placeholder="Proporcione el tipo"
-                                                       th:value="${empleado.tipo}">
-                                            </div>                                 
-                                        </div>
-                                        <div class="row mb-3"> 
-                                            <label for="inputFile" class="col-sm-2 col-form-label">Fotografia</label>                                 
-                                            <div class="col-sm-10"> 
-                                                <input class="form-control" type="file" id="imagen"
-                                                       name="file"> 
-                                            </div>                                 
-                                        </div>   
+                                        </div>                                        
                                         <div class="row mb-3"> 
                                         </div>                                                         
                                         <div class="row mb-3"> 

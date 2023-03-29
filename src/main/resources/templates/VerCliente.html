@@ -195,50 +195,41 @@
         <!-- End Sidebar-->         
         <main id="main" class="main"> 
             <div class="pagetitle"> 
-                <h1>Empleado</h1> 
+                <h1>Cliente</h1> 
                 <nav> 
                     <ol class="breadcrumb"> 
                         <li class="breadcrumb-item"><a th:href="@{/MenuPrincipalAdmin}">Menu Principal</a> </li>                         
-                        <li class="breadcrumb-item">Empleados</li>                         
-                        <li class="breadcrumb-item active">Ver Empleados</li>                         
+                        <li class="breadcrumb-item">Clientes</li>                         
+                        <li class="breadcrumb-item active">Ver Clientes</li>                         
                     </ol>                     
                 </nav>                 
             </div>
             <!-- End Page Title -->             
             <div class="card-body"> 
-                <h5 class="card-title">Lista de empleados</h5> 
+                <h5 class="card-title">Lista de Clientes</h5> 
                 <table class="table table-borderless datatable">
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Nombres</th>
                             <th scope="col">Apellidos</th>
-                            <th scope="col">Fecha Nacimiento</th>
-                            <th scope="col">Cedula</th>
-                            <th scope="col">Cedular</th>
-                            <th scope="col">Dirección</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Foto</th>
+                            <th scope="col">Correo electronico</th>                            
+                            <th scope="col">Celular</th>
+                            <th scope="col">Dirección</th>                           
                             <th scope="col">Estado</th>
                             <th colspan="2">Editar/Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="empleado: ${empleados}">
-                            <td scope="row" th:text="${empleado.id}"></td>
-                            <td scope="row" th:text="${empleado.nombres}"></td>
-                            <td scope="row" th:text="${empleado.apellidos}"></td>
-                            <td scope="row" th:text="${empleado.fecha_Nacimiento}"></td>
-                            <td scope="row" th:text="${empleado.cedula}"></td>
-                            <td scope="row" th:text="${empleado.celular}"></td>    
-                            <td scope="row" th:text="${empleado.direccion}"></td>
-                            <td scope="row" th:text="${empleado.tipo}"></td>
-                            <td scope="row"><img th:src="@{'/assets/img/' + ${empleado.foto}}"
-                                     th:alf="${empleado.foto}"
-                                     style='max-width: 100%'></img> </td>
-                            <td scope="row" th:text="${empleado.estado}"></td>
-                            <td><a th:href="@{/Empleado/editar/{id}(id=${empleado.id})}"> <span class="badge bg-warning"> Editar </span> </a></td>
-                            <td><a th:href="@{/Empleado/eliminar/{id}(id=${empleado.id})}"> <span class="badge bg-danger"> Eliminar </span> </a></td>
+                        <tr th:each="cliente: ${clientes}">
+                            <td scope="row" th:text="${cliente.id}"></td>
+                            <td scope="row" th:text="${cliente.nombres}"></td>
+                            <td scope="row" th:text="${cliente.apellidos}"></td>
+                            <td scope="row" th:text="${cliente.correoElectronico}"></td>                  
+                            <td scope="row" th:text="${cliente.celular}"></td>    
+                            <td scope="row" th:text="${cliente.direccion}"></td>                       
+                            <td><a th:href="@{/Cliente/editar/{id}(id=${cliente.id})}"> <span class="badge bg-warning"> Editar </span> </a></td>
+                            <td><a th:href="@{/Cliente/eliminar/{id}(id=${cliente.id})}"> <span class="badge bg-danger"> Eliminar </span> </a></td>
                         </tr>
                     </tbody>
                 </table>                

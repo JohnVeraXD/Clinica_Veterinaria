@@ -194,29 +194,29 @@
         <!-- End Sidebar-->             
         <main id="main" class="main"> 
             <div class="pagetitle"> 
-                <h1>Agregar Empleado</h1> 
+                <h1>Agregar Cliente</h1> 
                 <nav> 
                     <ol class="breadcrumb"> 
                         <li class="breadcrumb-item">
                             <a th:href="@{/MenuPrincipalAdmin}">Menu Principal</a>
                         </li>                             
-                        <li class="breadcrumb-item">Empleado</li>                             
-                        <li class="breadcrumb-item active">Agregar Empleado</li>                             
+                        <li class="breadcrumb-item">Cliente</li>                             
+                        <li class="breadcrumb-item active">Agregar Cliente</li>                             
                     </ol>                         
                 </nav>                     
             </div>
             <!-- End Page Title -->                 
             <section class="section"> 
                 <div class="card-body"> 
-                    <h5 class="card-title">Registrar Empleado</h5> 
+                    <h5 class="card-title">Registrar Cliente</h5> 
                     <!-- General Form Elements -->                         
-                    <form th:action="@{/Empleado/guardar}" method="post" enctype="multipart/form-data"> 
+                    <form th:action="@{/Cliente/guardar}" method="post" enctype="multipart/form-data"> 
                         <div class="row mb-3"> 
                             <label for="inputText" class="col-sm-2 col-form-label">Nombres</label>                                 
                             <div class="col-sm-10"> 
                                 <input type="text" class="form-control" id="formGroupExampleInput"
                                        name="nombres"
-                                       placeholder="Escriba los nombres del empleado">
+                                       placeholder="Escriba los nombres del cliente">
                             </div>                                 
                         </div>                             
                         <div class="row mb-3"> 
@@ -224,27 +224,17 @@
                             <div class="col-sm-10"> 
                                 <input type="text" class="form-control" id="formGroupExampleInput2"
                                        name="apellidos"
-                                       placeholder="Escriba los apellidos del empleado">
+                                       placeholder="Escriba los apellidos del cliente">
                             </div>                                 
                         </div> 
                         <div class="row mb-3"> 
-                            <label for="inputDate" class="col-sm-2 col-form-label">Fecha de nacimiento</label>                                 
+                            <label for="inputText" class="col-sm-2 col-form-label">Correo electronico</label>                                 
                             <div class="col-sm-10"> 
-                                <input type="date" class="form-control" id="formGroupExampleInput3"
-                                       name="fecha_Nacimiento"
-                                       placeholder="Proporcione la fecha de nacimiento">
+                                <input type="text" class="form-control" id="formGroupExampleInput3"
+                                       name="correoElectronico"
+                                       placeholder="Proporcione el correo electronico">
                             </div>                                 
-                        </div>
-                        <div class="row mb-3"> 
-                            <label for="inputText" class="col-sm-2 col-form-label">Cedula</label>                                 
-                            <div class="col-sm-10"> 
-                                <input type="text" class="form-control" id="formGroupExampleInput4"
-                                       name="cedula"
-                                       placeholder="Proporcione la cedula"
-                                       pattern="[0-9]+"
-                                       maxlength="10">
-                            </div>                                 
-                        </div>
+                        </div>                  
                         <div class="row mb-3"> 
                             <label for="inputText" class="col-sm-2 col-form-label">Celular</label>                                 
                             <div class="col-sm-10"> 
@@ -262,23 +252,7 @@
                                        name="direccion"
                                        placeholder="Proporcione la direccion">
                             </div>                                 
-                        </div>
-                        <div class="row mb-3"> 
-                            <label for="inputText" class="col-sm-2 col-form-label">Tipo</label>                                 
-                            <div class="col-sm-10"> 
-                                <input type="text" class="form-control" id="formGroupExampleInput7"
-                                       name="tipo"
-                                       placeholder="Proporcione el tipo">
-                            </div>                                 
-                        </div>
-                        <div class="row mb-3"> 
-                            <label for="inputFile" class="col-sm-2 col-form-label">Fotografia</label>                                 
-                            <div class="col-sm-10"> 
-                                <input class="form-control" type="file" id="imagen"
-                                       name="file"
-                                       placeholder="Proporcione una foto"> 
-                            </div>                                 
-                        </div>                                                                                     
+                        </div>                                                                          
                         <div class="row mb-3"> 
                         </div>                                                         
                         <div class="row mb-3"> 
